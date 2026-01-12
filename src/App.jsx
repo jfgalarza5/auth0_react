@@ -1,6 +1,7 @@
 import './App.css';
 import { useAuth0 } from '@auth0/auth0-react';
 import Profile from './components/Profile';
+import NavBar from './components/navbar';
 
 function App() {
   const { isAuthenticated, isLoading, error } = useAuth0();
@@ -19,13 +20,8 @@ function App() {
   }
 
   return <div>
-    <nav className='navegacion'>
-      <h3>Gestion de usuarios</h3>
-      <div>
-        
-      </div>
-    </nav>
     <div className='contenedor'>
+      <NavBar/>
       <h1>Aplicacion Autenticacion</h1>
       { isAuthenticated ? <div>
         <p>Sesion Iniciada</p>
