@@ -49,3 +49,11 @@
 h3{
   margin: 0;
 }
+
+.submenus{
+  display: flex;
+  gap: 15px;
+}
+.submenus a{
+  color: white;
+}
