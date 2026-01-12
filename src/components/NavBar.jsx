@@ -6,11 +6,17 @@ const NavBar = ()=>{
     const { isAuthenticated } = useAuth0();
 
     return <nav className="navegacion">
-        { isAuthenticated ? <div>
-          <LogoutButton/>
-        </div> : <div>
-          <LoginButton/>
-        </div>}
+      <h3>Gestion de usuarios</h3>
+      <div className="submenus">
+        <a href="#home">Inicio</a>
+        <a href="#users">Usuarios</a>
+        <a href="#about">Sobre Nosotros</a>
+      </div>
+      { isAuthenticated ? <div>
+        <LogoutButton/>
+      </div> : <div>
+        <LoginButton/>
+      </div>}
     </nav>
 }
 
